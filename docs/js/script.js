@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     $(document).click(function(event) {
         var t = $(event.target);
-        if (t.closest("#sidebar-wrapper").length || t.closest("#top-menu .lines-button").length) {
+        if (t.context == $("#sidebar-wrapper")[0] || t.context == $("#top-menu .lines-button")[0] || t.context == $("#top-menu .lines-button").children()[0]) {
             return;
         }
         $("#wrapper").removeClass("toggled");
