@@ -23,9 +23,9 @@ html {
 }
 
 #top-menu .lines-button {
+    padding: 0;
     float: left;
     height: 45px;
-    width: 40px;
     border: none;
     background: none;
 }

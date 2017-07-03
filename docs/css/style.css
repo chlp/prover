@@ -695,4 +695,14 @@ footer .footer-content h4 {
         width: 234px;
         border-bottom: solid 1px;
     }
+
+    #prover {
+        padding-top: 70px;
+        padding-bottom: 25px;
+    }
+
+    #prover .about-prover-block {
+        text-align: center;
+        padding: 0;
+    }
 }
