@@ -432,6 +432,7 @@ ul.icons-ul li a:hover {
 }
 
 .use-case:hover > div > .use-cases-text {
+    width: 100%;
     max-height: 200px;
     opacity: 1;
     position: absolute;
