@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("body").on("click","a[target!='_blank']", function(event) {
+    $('body').on("click","a[target!='_blank']", function(event) {
         event.preventDefault();
         var id  = $(this).attr('href');
         $("#wrapper").removeClass("toggled");
@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
 
     var lastId,
-        menu = $(".sidebar-nav"),
+        menu = $('.sidebar-nav'),
         menuItems = menu.find("a"),
         scrollItems = menuItems.map(function(){
             var item = $($(this).attr("href"));
@@ -43,21 +43,7 @@ $(document).ready(function(){
         }
     });
 
-    $(document).click(function(event) {
-        var t = $(event.target);
-        if (t.closest("#top-menu .lines-button").length) {
-            return;
-        }
-        $("#wrapper").removeClass("toggled");
-        event.stopPropagation();
-    });
-
     $("#top-menu .lines-button").click(function () {
-        $("#wrapper").toggleClass("toggled");
-    });
-
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
 
@@ -65,5 +51,10 @@ $(document).ready(function(){
         e.preventDefault();
         localStorage['lang'] = e.target.dataset.lang;
         location.reload();
+    });
+
+    $('.wrapper-background').click(function(e) {
+        e.preventDefault();
+        $("#wrapper").removeClass("toggled");
     });
 });

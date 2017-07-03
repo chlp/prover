@@ -40,7 +40,7 @@ section:nth-child(2n) {
 
 #wrapper.toggled .wrapper-background {
     opacity: 0.5;
-    z-index: 1001;
+    z-index: 1005;
 }
 
 .wrapper-background {
