@@ -1,11 +1,13 @@
 'use strict';
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
     context: __dirname + "/develop",
     entry: {
-        main: "./main"
+        main: "./main",
+        translate: './translation'
     },
     output: {
         path: __dirname + "/public/dist",
@@ -38,9 +40,9 @@ module.exports = {
             filename: "[name].css",
             disable: false,
             allChunks: true
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ]
-
 
 };
 
