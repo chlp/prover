@@ -15,6 +15,10 @@
     <link href="./public/dist/main.css" rel="stylesheet">
 
     <script src="./public/dist/translate.js"></script>
+    <script type="text/javascript">
+        window.lang = translate.lang;
+        window.translate = translate.tr;
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -138,22 +142,6 @@
                     </ul>
                 </div>
             </section>
-            <!-- email subscribing not ready yet #36571
-            <section class="email">
-                <div class="container-fluid">
-                    <div class="row">
-                        <form>
-                            <div class="col-sm-6 col-xs-12">
-                                <input type="text" placeholder="e-mail">
-                            </div>
-                            <div class="col-sm-6 col-xs-12">
-                                <button class="btn-submit">Подписаться</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            -->
             <section id="use-cases">
                 <h1><script>translate('Use cases')</script></h1>
                 <div class="use-cases">
@@ -347,6 +335,19 @@
                             <span class="role"><script>translate('Adviser')</script></span>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section class="email">
+                <div>
+                    <form id="subscribe_form">
+                        <div id="subscribe_captcha"></div>
+                        <input id="subscribe_form_lang" type="hidden" name="lang" value="en">
+                        <input type="hidden" name="success_url" value="https://prover.io?subscribe_success">
+                        <input type="hidden" name="error_url" value="https://prover.io?subscribe_error">
+                        <input type="text" name="email" placeholder="e-mail">
+                        <button id="subscribe_btn" class="btn-submit whitepaper-and-subscribe-buttons"><script>translate('Subscribe')</script></button>
+                        <div id="subscribe_status"></div>
+                    </form>
                 </div>
             </section>
             <footer id="contacts">

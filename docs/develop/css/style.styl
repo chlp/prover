@@ -213,7 +213,6 @@ i.fa {
     display: table-cell;
     vertical-align: middle;
     margin: 0;
-    font-weight: 300;
     font-size: 22px;
 }
 
@@ -321,8 +320,11 @@ ul.icons-ul li a:hover {
     color: #383838;
 }
 
-.email {
-    color: #222222;
+.email > div {
+    width: 50%;
+    border: 1px solid #777;
+    margin: 0 auto;
+    padding: 1%;
 }
 
 .email input[type="text"] {
@@ -331,9 +333,12 @@ ul.icons-ul li a:hover {
     display: inline-block;
     border: 0;
     margin: 0;
-    background: #eeeeee;
     padding: 0;
-    width: 100%;
+    width: calc(100% - 250px);
+}
+
+.email input[name="email"] {
+    background: transparent;
 }
 
 .email input[type="text"]:focus {
@@ -444,6 +449,7 @@ ul.icons-ul li a:hover {
     overflow: hidden;
     background: #eee;
     padding-left: 15px;
+    padding-bottom: 0;
 }
 
 #team h4 {

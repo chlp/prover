@@ -29,4 +29,4 @@ function tr(code) {
     document.write(translatedStr);
 }
 
-module.exports = tr;
+module.exports = {tr: tr, lang: lang};

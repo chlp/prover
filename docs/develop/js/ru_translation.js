@@ -41,7 +41,8 @@ let translate = {
     'in case of one-time investment of 100 ETH or more': 'при единовременном инвестировании 100 ETH и более',
     'For early birds, there is a system of discounts': 'Для ранних инвесторов предусмотрена система скидок',
     'when purchased on the first day of crowdsale': 'при покупке в первый день crowdsale',
-    'when purchased during the first week of the crowdsale': 'при покупке в течение первой недели проведения crowdsale'
+    'when purchased during the first week of the crowdsale': 'при покупке в течение первой недели проведения crowdsale',
+    'Subscribe': 'Подписаться'
 };
 
 export default translate;
