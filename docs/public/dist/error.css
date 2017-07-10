@@ -1,0 +1,21 @@
+body {
+    background: rgba(238, 238, 238, 1);
+}
+
+#wrapper {
+    margin: 50px 0;
+}
+
+#wrapper h1 {
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+#wrapper p {
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+#wrapper .error {
+    font-weight: 600;
+}

@@ -42,7 +42,9 @@ let translate = {
     'For early birds, there is a system of discounts': 'There is discounts for early investors',
     'when purchased on the first day of crowdsale': 'when purchased on the first day of crowdsale',
     'when purchased during the first week of the crowdsale': 'when purchased during the first week of the crowdsale',
-    'Subscribe': 'Subscribe'
+    'Subscribe': 'Subscribe',
+    'Page not found': 'Page not found',
+    'Link main page': 'You can go to the <a href="/">main page</a>'
 };
 
 export default translate;
