@@ -44,7 +44,7 @@ let translate = {
     'when purchased during the first week of the crowdsale': 'при покупке в течение первой недели проведения crowdsale',
     'Subscribe': 'Подписаться',
     'Page not found': 'Данной страницы не существует',
-    'Link main page': 'Вы можете перейти на <a href="./">главную страницу</a>'
+    'Link main page': 'Вы можете перейти на <a href="/">главную страницу</a>'
 };
 
 export default translate;

@@ -44,7 +44,7 @@ let translate = {
     'when purchased during the first week of the crowdsale': 'when purchased during the first week of the crowdsale',
     'Subscribe': 'Subscribe',
     'Page not found': 'Page not found',
-    'Link main page': 'You can go to the <a href="./">main page</a>'
+    'Link main page': 'You can go to the <a href="/">main page</a>'
 };
 
 export default translate;
