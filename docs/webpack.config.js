@@ -1,18 +1,19 @@
 'use strict';
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    watch: true,
+    // watch: true,
     context: __dirname + "/develop",
     entry: {
         main: "./main",
         translate: './translation'
     },
     output: {
-        path: __dirname + "/public/dist",
-        filename: "[name].js",
+        path: __dirname,
+        filename: "./public/dist/[name].js",
         library: "[name]"
     },
 
@@ -38,12 +39,16 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: "[name].css",
+            filename: "./public/dist/[name].css",
             disable: false,
             allChunks: true
         }),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin(),
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: './index.html',
+            inject: 'head'
+        })
     ]
-
 };
 
