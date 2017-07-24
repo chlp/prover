@@ -2,6 +2,8 @@
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var WebpackChunkHash = require('webpack-chunk-hash');
+var MD5HashPlugin = require('md5-hash-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -13,7 +15,7 @@ module.exports = {
     },
     output: {
         path: __dirname,
-        filename: "./public/dist/[name].js",
+        filename: "./public/dist/[name].js?[chunkhash]",
         library: "[name]"
     },
 
@@ -38,14 +40,16 @@ module.exports = {
         ]
     },
     plugins: [
+        new WebpackChunkHash({algorithm: 'md5'}),
+        new MD5HashPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         new ExtractTextPlugin({
-            filename: "./public/dist/[name].css",
+            filename: "./public/dist/[name].css?[contenthash]",
             disable: false,
             allChunks: true
         }),
-        new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
-            hash: true,
+            hash: false,
             template: './index.html',
             inject: 'head'
         })
